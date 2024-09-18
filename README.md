@@ -32,7 +32,7 @@ Application Components:
 
 
 ## 3. Deployment Strategy
-Local Development: Docker Compose
+### Local Development: Docker Compose
 
 For local development, we use Docker Compose to run all the containers on a single network, enabling communication between the frontend, backend, and database.
 
