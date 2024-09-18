@@ -40,3 +40,4 @@ For local development, we use Docker Compose to run all the containers on a sing
 * Backend interacts with the database.
 
 ## 4. Docker Compose Setup
+### Directory Structure:
