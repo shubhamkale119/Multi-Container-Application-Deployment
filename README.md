@@ -9,4 +9,5 @@ This document explains the architecture, deployment strategy, and step-by-step i
 * Backend: Node.js API
 
 * Database: PostgreSQL
+
 The deployment is managed using Docker Compose for local development. The application demonstrates container orchestration, container networking, and dependency management across services.
