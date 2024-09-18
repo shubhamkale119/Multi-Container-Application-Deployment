@@ -41,3 +41,15 @@ For local development, we use Docker Compose to run all the containers on a sing
 
 ## 4. Docker Compose Setup
 ### Directory Structure:
+```bash
+multi-container-app/
+├── backend/
+│   ├── Dockerfile
+│   ├── index.js
+│   └── ...
+├── frontend/
+│   ├── Dockerfile
+│   └── ...
+├── docker-compose.yml
+└── README.md
+```
