@@ -4,7 +4,7 @@
 
 This document explains the architecture, deployment strategy, and step-by-step instructions for building, deploying, and managing a multi-container application consisting of three services:
 
-#Frontend: React application
+Frontend: React application
 
 Backend: Node.js API
 
