@@ -11,3 +11,10 @@ This document explains the architecture, deployment strategy, and step-by-step i
 * Database: PostgreSQL
 
 The deployment is managed using Docker Compose for local development. The application demonstrates container orchestration, container networking, and dependency management across services.
+
+## 2. Architecture
+
+Application Components:
+
+1. Frontend:
+* React application, served via port 3000.
