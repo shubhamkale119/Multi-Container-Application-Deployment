@@ -187,7 +187,7 @@ Database Container (PostgreSQL):
 
 * I used a pre-built MongoDB Docker image, which I defined in the docker-compose.yml file.
 
-### 2. Build and Run Containers:
+### 3. Build and Run Containers:
 
 Run the following command to build and start all services using Docker Compose:
 
@@ -199,13 +199,13 @@ This command will:
 * Start the MongoDB database.
 * Run the containers on a single network.
 
-  ### 3. Access the Application:
+  ### 4. Access the Application:
 
 * Frontend: Visit ```http://localhost:3000``` in your browser to access the React frontend.
 * Backend: Visit ```http://localhost:5000``` for the backend API.
 * Database: The MongoDB database will run internally and is accessible via the backend.
 
-### 4. Stopping the Application:
+### 5. Stopping the Application:
 To stop all services, use:
 
 ```docker-compose down```
