@@ -20,7 +20,7 @@ Application Components:
 * React application, served via port 3000.
 
 2. Backend:
-* Backend with Node.js, exposed on port 5000.
+* Backend with Node.js, exposed on port 5000. ```bash https://github.com/Anand-1432/Techdome-frontend ```
 * Serves the API to interact with the database.
 * Uses PostgreSQL as its database.
 
