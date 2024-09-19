@@ -285,6 +285,7 @@ To scale the application based on load:
 
 To implement rollback:
 * Roll back to a previous deployment revision using:
+  
 ``` kubectl rollout undo deployment/backend```
 
 
