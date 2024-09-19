@@ -97,3 +97,14 @@ networks:
   app-network:
     driver: bridge
 ```
+
+## 5. Building and Deploying
+
+### Step-by-Step Instructions
+
+### 1. Clone the Repositories:
+
+Clone both the frontend and backend repositories into the appropriate directories.
+``` git clone https://github.com/Anand-1432/Techdome-frontend 
+    git clone https://github.com/Anand-1432/Techdome-backend ```
+
