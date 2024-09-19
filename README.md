@@ -275,6 +275,17 @@ kubectl expose deployment backend --type=NodePort --port=5000
 ![image](https://github.com/user-attachments/assets/1e054408-3a69-4a72-8f16-feb396c305e1)
 
 
+## 8. Scaling and Rollback Strategy
+
+To scale the application based on load:
+
+* Use the following command to scale the backend to 5 replicas:
+
+  ``` kubectl scale deployment backend --replicas=5 ```
+
+To implement rollback:
+* Roll back to a previous deployment revision using:
+``` kubectl rollout undo deployment/backend```
 
 
 
