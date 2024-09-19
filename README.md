@@ -8,7 +8,7 @@ This document explains the architecture, deployment strategy, and step-by-step i
 
 * Backend: Node.js API
 
-* Database: PostgreSQL
+* Database: MongoDB Compass
 
 The deployment is managed using Docker Compose for local development. The application demonstrates container orchestration, container networking, and dependency management across services.
 
@@ -25,7 +25,7 @@ Application Components:
 * Uses PostgreSQL as its database.
 
 3. Database:
-* PostgreSQL database, running on port 5432.
+* MongoDB database, running on port 27017.
 * Stores application data and is accessible by the backend.
 
 ## Architecture Diagram:
@@ -97,10 +97,19 @@ services:
       - "27017:27017"
     networks:
       - app-network
-  
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
 networks:
   app-network:
     driver: bridge
+
+volumes:
+  mongo-data:
+
 
 ```
 
@@ -185,8 +194,21 @@ Run the following command to build and start all services using Docker Compose:
 This command will:
 
 * Build the Docker images for the frontend and backend from their respective Dockerfiles.
-* Start the PostgreSQL database.
+* Start the MongoDB database.
 * Run the containers on a single network.
+
+  ### 3. Access the Application:
+
+* Frontend: Visit ```http://localhost:3000``` in your browser to access the React frontend.
+* Backend: Visit ```http://localhost:5000``` for the backend API.
+* Database: The MongoDB database will run internally and is accessible via the backend.
+
+### 4. Stopping the Application:
+To stop all services, use:
+
+```docker-compose down```
+
+## 6. Kubernetes Deployment 
 
 
 
