@@ -15,12 +15,12 @@ The deployment is managed using Docker Compose for local development. The applic
 Application Components:
 
 1. **Frontend**: Github Repo  ``` https://github.com/Anand-1432/Techdome-frontend ```
- - * React application, served via port 3000.
+ -  React application, served via port 3000.
 
 2. **Backend**: Githib Repo ```https://github.com/Anand-1432/Techdome-backend```
 - Backend with Node.js, exposed on port 5000.
-- * Serves the API to interact with the database.
-- * Uses PostgreSQL as its database.
+- Serves the API to interact with the database.
+- Uses PostgreSQL as its database.
 
 3. Database:
   * MongoDB database, running on port 27017.
