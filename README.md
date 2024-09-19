@@ -39,7 +39,9 @@ For local development, we use Docker Compose to run all the containers on a sing
 * Frontend connects to the backend API.
 * Backend interacts with the database.
 
-## 4. Docker Compose Setup
+## 4. Docker Compose Configuration
+In the root directory of the project, create a docker-compose.yml file. This file will define the services for Frontend, Backend, and Database, and will ensure they are networked together.
+
 ### Directory Structure:
 ```bash
 multi-container-app/
