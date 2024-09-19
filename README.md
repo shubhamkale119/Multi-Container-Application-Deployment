@@ -8,7 +8,7 @@ This document explains the architecture, deployment strategy, and step-by-step i
 
 * Backend: Node.js API
 
-* Database: MongoDB Compass
+* Database: MongoDB 
 
 The deployment is managed using Docker Compose for local development. The application demonstrates container orchestration, container networking, and dependency management across services.
 
@@ -183,7 +183,7 @@ EXPOSE 5000
 
 Database Container (PostgreSQL):
 
-* I used a pre-built PostgreSQL Docker image, which I defined in the docker-compose.yml file.
+* I used a pre-built MongoDB Docker image, which I defined in the docker-compose.yml file.
 
 ### 2. Build and Run Containers:
 
@@ -209,6 +209,47 @@ To stop all services, use:
 ```docker-compose down```
 
 ## 6. Kubernetes Deployment 
+
+To deploy the application to a local Kubernetes cluster using Minikube, follow these steps:
+
+### 1. Start Minikube:
+
+``` minikube start ```
+
+### 2. Apply Kubernetes Manifests:
+
+backend-deployment.yml:
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: backend-image
+        ports:
+        - containerPort: 5000
+```
+
+### Apply the manifests using kubectl:
+
+```
+kubectl apply -f backend-deployment.yml
+
+kubectl apply -f frontend-deployment.yml
+
+kubectl apply -f db-deployment.yml
+```
 
 
 
