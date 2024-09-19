@@ -254,6 +254,14 @@ kubectl apply -f frontend-deployment.yml
 kubectl apply -f db-deployment.yml
 ```
 
+### Expose the services:
+```
+kubectl expose deployment frontend --type=NodePort --port=3000
+
+kubectl expose deployment backend --type=NodePort --port=5000
+```
+
+
 ## 7. Screenshots:
 
 ### 1. Frontend running in the browser (http://localhost:3000):
