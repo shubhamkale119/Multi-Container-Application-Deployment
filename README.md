@@ -55,3 +55,45 @@ multi-container-app/
 ├── docker-compose.yml
 └── README.md
 ```
+
+
+Here's docker-compose.yml file
+
+```version: '3'
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+  
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      DATABASE_URL: postgres://postgres:password@db:5432/mydatabase
+    depends_on:
+      - db
+    networks:
+      - app-network
+  
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydatabase
+    ports:
+      - "5432:5432"
+    networks:
+      - app-network
+  
+networks:
+  app-network:
+    driver: bridge
+```
