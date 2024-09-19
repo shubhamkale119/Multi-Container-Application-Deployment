@@ -199,7 +199,7 @@ This command will:
 * Start the MongoDB database.
 * Run the containers on a single network.
 
-  ### 4. Access the Application:
+### 4. Access the Application:
 
 * Frontend: Visit ```http://localhost:3000``` in your browser to access the React frontend.
 * Backend: Visit ```http://localhost:5000``` for the backend API.
