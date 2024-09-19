@@ -254,5 +254,21 @@ kubectl apply -f frontend-deployment.yml
 kubectl apply -f db-deployment.yml
 ```
 
+## 7. Screenshots:
+
+### 1. Frontend running in the browser (http://localhost:3000):
+
+![image](https://github.com/user-attachments/assets/0601e999-acf3-44f6-8125-ea83d617aa60)
+
+### 2. Database connection with health checkup:
+
+![image](https://github.com/user-attachments/assets/e702dc57-cc25-43ac-9667-daf008554fb9)
+
+### 3. Docker Compose Output:
+![image](https://github.com/user-attachments/assets/1e054408-3a69-4a72-8f16-feb396c305e1)
+
+
+
+
 
 
