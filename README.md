@@ -166,3 +166,6 @@ CMD ["npm", "start"]
 EXPOSE 5000
 ```
 
+### Database Container (PostgreSQL):
+
+I used a pre-built PostgreSQL Docker image, which I defined in the docker-compose.yml file.
