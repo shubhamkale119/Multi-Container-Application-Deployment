@@ -33,19 +33,21 @@ Application Components:
 
 
 ## 3. Deployment Strategy
+
 ### Local Development: Docker Compose
 
 For local development, we use Docker Compose to run all the containers on a single network, enabling communication between the frontend, backend, and database.
 
-* Frontend connects to the backend API.
-* Backend interacts with the database.
+- Frontend connects to the backend API.
+- Backend interacts with the database.
 
 ### Production: Kubernetes
 
 In a production environment, the application is deployed to a Kubernetes cluster (Minikube) with services managed via Kubernetes deployment manifests.
 
 ## 4. Docker Compose Configuration
-In the root directory of the project, create a docker-compose.yml file. This file will define the services for Frontend, Backend, and Database, and will ensure they are networked together.
+
+In the root directory of the project, create a `docker-compose.yml` file. This file defines the services for Frontend, Backend, and Database, ensuring they are networked together.
 
 ### Directory Structure:
 ```bash
@@ -62,7 +64,7 @@ multi-container-app/
 ```
 
 
-Here's docker-compose.yml file
+docker-compose.yml file
 
 ```
 version: '3'
