@@ -63,7 +63,8 @@ multi-container-app/
 
 Here's docker-compose.yml file
 
-```version: '3'
+```
+version: '3'
 
 services:
   frontend:
@@ -80,26 +81,27 @@ services:
     ports:
       - "5000:5000"
     environment:
-      DATABASE_URL: postgres://postgres:password@db:5432/mydatabase
+      DATABASE_URL: mongodb://mongo:27017/mydatabase
     depends_on:
       - db
     networks:
       - app-network
   
   db:
-    image: postgres:16
+    image: mongo:6
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: mydatabase
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: mydatabase
     ports:
-      - "5432:5432"
+      - "27017:27017"
     networks:
       - app-network
   
 networks:
   app-network:
     driver: bridge
+
 ```
 
 ## 5. Building and Deploying
