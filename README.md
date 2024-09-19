@@ -10,12 +10,7 @@ This document explains the architecture, deployment strategy, and step-by-step i
 
 The deployment is managed using Docker Compose for local development. The application demonstrates container orchestration, container networking, and dependency management across services.
 
-## 2. Architecture Diagram:
-
-![image](https://github.com/user-attachments/assets/bdfa6c1e-0a9c-4a15-af3c-243489eeee5b)
-
-
-
+## 2. Architecture 
 
 ### Application Components:
 
@@ -33,6 +28,8 @@ The deployment is managed using Docker Compose for local development. The applic
    - Stores application data and is accessible by the backend.
 
 ## Architecture Diagram:
+
+![image](https://github.com/user-attachments/assets/bdfa6c1e-0a9c-4a15-af3c-243489eeee5b)
 
 
 ## 3. Deployment Strategy
