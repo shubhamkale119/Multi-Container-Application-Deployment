@@ -39,6 +39,10 @@ For local development, we use Docker Compose to run all the containers on a sing
 * Frontend connects to the backend API.
 * Backend interacts with the database.
 
+### Production: Kubernetes
+
+In a production environment, the application is deployed to a Kubernetes cluster (Minikube) with services managed via Kubernetes deployment manifests.
+
 ## 4. Docker Compose Configuration
 In the root directory of the project, create a docker-compose.yml file. This file will define the services for Frontend, Backend, and Database, and will ensure they are networked together.
 
@@ -166,6 +170,21 @@ CMD ["npm", "start"]
 EXPOSE 5000
 ```
 
-### Database Container (PostgreSQL):
+Database Container (PostgreSQL):
 
-I used a pre-built PostgreSQL Docker image, which I defined in the docker-compose.yml file.
+* I used a pre-built PostgreSQL Docker image, which I defined in the docker-compose.yml file.
+
+### 2. Build and Run Containers:
+
+Run the following command to build and start all services using Docker Compose:
+
+``` docker-compose up --build ```
+
+This command will:
+
+* Build the Docker images for the frontend and backend from their respective Dockerfiles.
+* Start the PostgreSQL database.
+* Run the containers on a single network.
+
+
+
