@@ -265,7 +265,8 @@ kubectl expose deployment backend --type=NodePort --port=5000
 
 ### 1. Frontend running in the browser (http://localhost:3000):
 
-![image](https://github.com/user-attachments/assets/0601e999-acf3-44f6-8125-ea83d617aa60)
+![image](https://github.com/user-attachments/assets/4f020633-fa1b-49eb-8cef-c4465b04b891)
+
 
 ### 2. Database connection with health checkup:
 
