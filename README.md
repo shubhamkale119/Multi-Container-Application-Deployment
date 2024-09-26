@@ -184,10 +184,10 @@ CMD ["npm", "start"]
 EXPOSE 5000
 ```
 
-Database Container (PostgreSQL):
+Database Container (MOngoDB Atlas):
 
-* I used a pre-built MongoDB Docker image, which I defined in the docker-compose.yml file.
-
+* I used MongoDB Atlas, which I defined in the docker-compose.yml file.
+  
 ### 2. Build and Run Containers:
 
 Run the following command to build and start all services using Docker Compose:
