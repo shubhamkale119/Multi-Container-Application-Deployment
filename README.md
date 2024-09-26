@@ -83,7 +83,8 @@ services:
     ports:
       - "5000:5000"
     environment:
-      DATABASE_URL: mongodb://mongo:27017/mydatabase
+      - DB=mongodb+srv://saptsagare2020:Shubham2579@cluster0.vaitvxh.mongodb.net/jobfinde_DB
+      - JWT_SECRET=saptsagare2020
     depends_on:
       - db
     networks:
